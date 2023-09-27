@@ -1,1 +1,25 @@
 // Specific CSS for your home-page
+.home {
+  width: 100%;
+  height: calc(100vh - 66px);
+  overflow: hidden !important;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('https://images.unsplash.com/photo-1543728069-a3f97c5a2f32?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2938&q=80');
+  background-size:cover;
+  background-position: bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .content {
+    text-align: center;
+  }
+  h1 {
+    font-size: 75px;
+  }
+  .btn-home {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 15px 35px !important;
+    border-radius: 15px !important;
+  }
+}
