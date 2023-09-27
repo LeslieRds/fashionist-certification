@@ -6,7 +6,7 @@
       <p><i class="fas fa-paper-plane"></i> par : <strong class="text-primary"><%= @post.user.nickname %></strong> <i class="far fa-calendar-alt"></i> <%= @post.created_at.strftime('%d-%m-%Y') %></p>
       <a href="<%= @post.url %>" class="btn btn-primary">Acceder à la source</a>
         <% if current_user == @post.user %>
-          <%= link_to icon('fas', 'trash-alt'), posts_path, method: :delete,class: "btn btn-danger btn-sm", data: {confirm: "Etes-vous sur de vouloir supprimer votre article ? "} %>
+        <%= link_to "Supprimer cet article", post_path(@post), class: "btn btn-danger mx-4 mt-4", data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr?"}%>
         <% end %>
     </div>
   </div>
@@ -25,7 +25,7 @@
           <div class="card-poster d-flex justify-content-between align-items-center"><p><i class="fas fa-paper-plane"></i> par : <strong class="text-primary"><%= comment.user.nickname %></strong></p><p><i class="far fa-calendar-alt"></i> <%= comment.created_at.strftime('%d-%m-%Y') %></p></div>
           <p><%= comment.content %></p>
           <% if current_user.id == comment.user_id %>
-          <%= link_to icon('fas', 'trash-alt'), comment_path(comment), method: :delete, class: "btn btn-danger btn-sm", data: {confirm: "Etes-vous sur de vouloir supprimer votre commentaire ? "} %>
+          <%= link_to "Supprimer ce commentaire", comment_path(comment), class: "btn btn-danger mx-4 mt-4", data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr?"}%>
           <% end %>
         </div>
       <% end %>
