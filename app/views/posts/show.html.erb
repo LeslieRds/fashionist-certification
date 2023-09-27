@@ -1,6 +1,9 @@
 <div class="container pt-5 mt-3">
   <div class="content-show border p-4 mt-3 shadow">
     <h1 class="w-100 pb-5 mt-5 text-primary"><%= @post.title %></h1>
+    <br>
+
+      <h3><%= @post.subtitle %></h3><br>
     <p><%= @post.content %></p>
     <div class="link-content w-100 text-right d-flex align-items-center justify-content-between mt-5">
       <p><i class="fa-solid fa-user" style="color: #6a00ff"></i> partagé par : <strong class="text-primary"><%= @post.user.nickname %></strong> <br> <i class="far fa-calendar-alt" style="color: #6a00ff"></i> <%= @post.created_at.strftime('%d-%m-%Y') %></p>
