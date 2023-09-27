@@ -25,7 +25,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    redirect_to post_path if !logged_in? || current_user != Post.find(params[:id]).user
+    Post.find(params[:id]).user
     @post.destroy
     redirect_to posts_path, status: :see_other
   end
