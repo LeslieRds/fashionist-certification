@@ -8,6 +8,7 @@
         <div class="card-product">
           <h2 class="card-product-infos"><%= post.title %></h2>
           <p class="card-product-infos"><%= post.subtitle %></p>
+          <h5 class="card-product-infos"> partagé par <em style="color: #6a00ff"><%= post.user.nickname %></em></h5>
         </div>
         <button type="button" class="btn-gradient">
         <%= link_to "Lire l'article", post_path(post), class: "text-decoration-none text-black" %>
