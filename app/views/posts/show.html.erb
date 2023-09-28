@@ -10,7 +10,7 @@
       <%= link_to icon('fas', 'feather-pointed'), edit_post_path(@post), class: "btn btn-primary" %>
       <%= link_to icon('fas', 'trash-alt'), post_path(@post), class: "btn btn-danger", data: {turbo_method: :delete, turbo_confirm: "Etes-vous sûr?"}%>
       <% end %>
-    <a href="<%= @post.url %>" class="btn btn-gradient">Lire l'article original</a>
+    <a href="<%= @post.url %>" class="btn btn-gradient" target="_blank">Lire l'article original</a>
     </div>
   </div>
   <div class="comment border p-4 mt-5 mb-5 shadow">
