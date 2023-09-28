@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: %i[show destroy]
+  before_action :set_post, only: %i[show destroy edit update]
 
   def index
     @posts = Post.all.order(created_at: :desc)
@@ -22,6 +22,13 @@ class PostsController < ApplicationController
     else
       render :new,  status: :unprocessable_entity
     end
+  end
+
+  def edit; end
+
+  def update
+    @post.update(post_params)
+    redirect_to post_path, status: :see_other
   end
 
   def destroy

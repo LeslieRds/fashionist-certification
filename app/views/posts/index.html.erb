@@ -1,16 +1,18 @@
-<div class="container pt-5 mt-3">
-  <h1 class="w-100 text-center pb-5 mt-3 title-index">
+<div class="container pt-3 mt-3">
+  <h1 class="w-100 text-center pb-3 title-index">
     Toutes les dernières tendances
   </h1>
-  <ul class="w-100 p-0">
-      <% @posts.each do |post| %>
-        <div class="card-article w-100 border mb-5 p-4 d-flex align-items-center justify-content-between shadow">
-          <h3 class="card-title"><%= post.title %></h3>
-          <h5 class="card-title"><%= post.subtitle %></h5>
-          <button type="button" class="btn-gradient">
-          <%= link_to "Lire l'article", post_path(post), class: "text-decoration-none text-black" %>
-          </button>
+  <ul>
+    <% @posts.each do |post| %>
+      <div class="col">
+        <div class="card-product">
+          <h2 class="card-product-infos"><%= post.title %></h2>
+          <p class="card-product-infos"><%= post.subtitle %></p>
         </div>
-      <% end %>
+        <button type="button" class="btn-gradient">
+        <%= link_to "Lire l'article", post_path(post), class: "text-decoration-none text-black" %>
+        </button>
+      </div>
+    <% end %>
   </ul>
 </div>

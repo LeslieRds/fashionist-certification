@@ -1,0 +1,12 @@
+<div class="container pt-5 mt-3">
+  <h2>Modifier votre article</h2>
+  <div class="form-edit mb-5">
+      <%= simple_form_for @post do |f| %>
+          <%= f.input :title, autofocus: true, input_html: { autocomplete: "title"} %>
+          <%= f.input :subtitle, autofocus: true, input_html: {autocomplete: "subtitle"} %>
+          <%= f.input :content, autofocus: true, :input_html => {:style => 'width: 100%', :rows => 5, class: 'response-project'} %>
+          <%= f.input :url %>
+          <%= f.button :submit, "Enregister l'article!", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+</div>
