@@ -1,3 +1,13 @@
+Exercice de création d'un site pour la certification du Wagon France - Exercice sur une durée de 8h
+
+<img width="1448" alt="Capture d’écran 2024-01-17 à 14 36 28" src="https://github.com/LeslieRds/fashionist-certification/assets/131589240/d84002ac-297f-4fb7-9236-63674f92e5a0">
+
+Si vous voulez tester la page, n'oubliez pas de taper la commande : rails db:seed afin que les profils utilisateurs créés pour l'exercice, ainsi que les contenus soient visibles. 
+
+Merci pour votre attention
+
+--------------------------------------------------------------------
+
 # Rails Share Posts
 
 Dans cet exercice, vous devez implémenter des fonctionnalités dans une application web `rails` à partir du cahier des charges spécifié ci-dessous et correspondant à votre sujet :
